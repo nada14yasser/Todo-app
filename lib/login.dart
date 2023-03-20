@@ -34,10 +34,8 @@ class _LoginState extends State<Login> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
         key: _scaffoldkey,
-        backgroundColor: Theme.of(context).primaryColor,
         body: SingleChildScrollView(
             child: Container(
               height: MediaQuery.of(context).size.height,
@@ -272,6 +270,7 @@ class _LoginState extends State<Login> {
                                   MaterialPageRoute(builder: (context) => const Home()),
                                 );
                               }).onError((error, stackTrace) {
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${error.toString()}")));
                                 print("Error ${error.toString()}");
                               });
                             },

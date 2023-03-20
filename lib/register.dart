@@ -53,7 +53,6 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
         key: _scaffoldkey,
-        backgroundColor: Theme.of(context).primaryColor,
         body: SingleChildScrollView(
             child: Container(
               height: MediaQuery.of(context).size.height,

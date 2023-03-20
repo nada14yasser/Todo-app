@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          primaryColor: Colors.orangeAccent[400]
+          primaryColor: Colors.orangeAccent[400],
+          hintColor: Colors.orangeAccent[400]!.withOpacity(0.5),
       ),
       home: const Login(),
     );
